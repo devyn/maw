@@ -1,0 +1,24 @@
+#!/bin/bash
+
+. /etc/rc.conf
+. /etc/rc.d/functions
+
+case "$1" in
+  start)
+    stat_busy "Restoring MAW logon menu"
+    PATH="$PATH:/usr/local/bin:/usr/local/sbin" maw-genlogon
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+      stat_done
+      rm_daemon maw
+    fi
+    ;;
+  stop)
+    ;;
+  restart)
+    $0 start
+    ;;
+  *)
+    echo "..."
+esac

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+maw autoboot $1 < /boot/maw.conf > /boot/grub/menu.lst
+reboot

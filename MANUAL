@@ -1,0 +1,16 @@
+Thanx for taking MAW-GRUB. I hope you're happy now.
+
+Anyway, this is basically an automatic GRUB file generator that will generate things like a logon menu, easier bootloader entries, and etc. all in one file! And that file is... YAML!
+
+After configuring everything you want (take a look at maw.example.conf), copy your "maw.conf" to /boot/maw.conf. Link "maw.rb" to /usr/local/bin/maw and the "maw-*" files to /usr/local/sbin/maw-* Now:
+
+# maw-genlogon
+# maw-genmenu
+
+And we're ready! Reboot, and you'll get a logon screen! Now press 'p', enter your password. Now we're at an automatically generated main menu! Select, and boot.
+
+AUTOBOOT is currently not finished, to use it you will have to add an INITscript that runs maw-genlogon. You will have to do that yourself, for now. I did include one for Arch Linux, if you're interested though...
+
+Anyway, everything works as I want it for now. Any complaints? Just message me on twitter (devynci) or GitHub (devyn)
+
+~devyn [2009] Use this in any way you wish, just please give credit to me!

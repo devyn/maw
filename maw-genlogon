@@ -1,0 +1,3 @@
+#!/bin/bash
+
+maw genlogon < /boot/maw.conf > /boot/grub/menu.lst

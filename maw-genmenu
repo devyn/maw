@@ -1,0 +1,3 @@
+#!/bin/bash
+
+maw genmenu < /boot/maw.conf > /boot/grub/after-auth.lst
